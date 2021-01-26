@@ -1,0 +1,22 @@
+{{page-title "Ex1"}}
+
+<div class="card">
+  <div class="card-header bg-primary text-light">
+    Ex1 : Note application
+  </div>
+  <div class="card-body">
+    <Textarea @input={{this.update}} @maxlength={{this.MAX}} class="form-control mb-3" rows="4" @value={{this.content}}/>
+
+    <button class="btn btn-primary"{{action "save"}}>Enregistrer</button>
+    <button class="btn btn-primary"{{action "clear"}}>Effacer</button>
+    <br><br>
+    <div class="alert alert-info">Il vous reste {{this.size}} caractères à définir</div>
+    {{#if this.info}}
+      <div class="alert alert-{{this.style}}">{{this.info}}</div>
+    {{/if}}
+  </div>
+
+
+</div>
+
+{{outlet}}
