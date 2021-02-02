@@ -1,0 +1,11 @@
+{{page-title "Ex1b"}}
+
+<ul class="list-group">
+  {{#each @model.items as |item|}}
+    <li class="list-group-item">
+      {{item}}
+    </li>
+  {{/each}}
+</ul>
+
+{{outlet}}

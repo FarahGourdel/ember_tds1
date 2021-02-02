@@ -25,10 +25,10 @@ export default class Ex1Controller extends Controller {
     this.content = 'Entrez votre texte';
   }
 
-  @action save(){
+  /*@action save(){
     console.log('Test save ' + this.content);
     this.info = 'Note sauvegardée';
-  }
+  }*/
 
   @action update(){
     this.info = 'Note modifiée';
