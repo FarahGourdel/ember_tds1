@@ -1,11 +1,28 @@
 {{page-title "Ex2"}}
 
-<ul>
-  {{#each @model.services as |srv|}}
-    <li>{{srv.name}}</li>
-  {{/each}}
-</ul>
+<h1>Services</h1>
+<div>
+  <div class="alert alert-info">
+    <span>Choisissez les éléments à inclure</span>
+    <br/>
+    {{#if @model.countActive}}
+      <b>{{@model.countActive}} service(s) actif(s)</b>
+    {{/if}}
+  </div>
 
-{{@model.sumActive}}
+  <div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      {{#each @model.services as |srv|}}
+        <li class="list-group-item {{if srv.active 'active' ''}}" {{action "toggleActive" srv}}>{{srv.name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div>
+    Total : {{@model.sumActive}}
+  </div>
+
+</div>
+
 
 {{outlet}}
