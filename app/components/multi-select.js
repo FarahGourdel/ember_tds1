@@ -27,9 +27,11 @@ export default class MultiSelectComponent extends Component {
     var selectedIds = [...select.selectedOptions].map(option => option.value);
     // Boucle if qui si l'argument en paramètre change va s'exécuter
     if (this.args.onChange) {
-      // Si l'argument change, les éléments vont être filtrer dans un champ 'elm', où la fonction selectedIds va elle
-      // aussi filtrer dans un champ e le tableau d'élément elm avec comme paramètre l'id sélectionnés et où la taille
-      // de selectedIds ne doit pas être vide et non supérieur à 0
+      // On récupère parmi les éléments, les éléments sélectionnés
+      // Parmi les selectedIds on filtre uniquement ceux dont l'id correspond à l'id de l'élément
+      // On prend la taille des éléments sélectionnées en regardant si la taille est supérieur à 0
+
+      // Notation : e => e+2>0 --> Créé une fonction qui prend en paramètre e et qui retourne si e est supérieur à 0
       this.args.onChange(this.elements.filter(elm => selectedIds.filter(e => e == elm[this.id]).length > 0));
     }
   }
