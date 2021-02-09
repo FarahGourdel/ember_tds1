@@ -18,11 +18,17 @@ export default class Step1Controller extends Controller {
 
   @action add(source, dest, what) {
     dest.pushObjects(what);
+    this.includedItems_ = [];
+    this.includedItems_.pushObjects(what);
+    this.dispoItems_ = []
     source.removeObjects(what);
   }
 
   @action remove(source, dest, what) {
     dest.pushObjects(what);
+    this.dispoItems_ = [];
+    this.dispoItems_.pushObjects(what);
+    this.includedItems_ = [];
     source.removeObjects(what);
   }
 
