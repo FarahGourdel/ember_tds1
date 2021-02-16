@@ -17,6 +17,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1oFIuR7Xmba010r0G3ZK8EXbQcE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -42,7 +45,7 @@
       <updated>1612876136684</updated>
       <workItem from="1612876142550" duration="207000" />
       <workItem from="1612876363754" duration="9596000" />
-      <workItem from="1613480487670" duration="4548000" />
+      <workItem from="1613480487670" duration="10499000" />
     </task>
     <servers />
   </component>

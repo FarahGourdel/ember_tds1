@@ -1,0 +1,21 @@
+{{page-title "Add"}}
+
+<form class="row g-3">
+
+  <div class="col-auto">
+    <Input class="form-control" @value={{@model.nom}} placeholder="Nom"/>
+  </div>
+
+  <div class="col-auto">
+    <Input class="form-control" @value={{@model.prenom}} placeholder="Prénom"/>
+  </div>
+
+  <div class="col-auto">
+    <Input class="form-control" @value={{@model.email}} placeholder="Email"/>
+  </div>
+
+  <button class="btn btn-primary" {{action "add" @model}}>Enregistrer</button>
+
+</form>
+
+{{outlet}}
