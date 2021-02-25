@@ -1,7 +1,7 @@
-import Model, { attr } from '@ember-data/model';
+import Model, { belongsTo } from '@ember-data/model';
 
 export default class ContactModel extends Model {
-  @attr('string') nom;
-  @attr('string') prenom;
-  @attr('string') email;
+  @belongsTo('string') nom;
+  @belongsTo('string') prenom;
+  @belongsTo('string') email;
 }
