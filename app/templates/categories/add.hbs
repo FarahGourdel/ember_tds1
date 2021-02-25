@@ -1,2 +1,30 @@
 {{page-title "Add"}}
+
+<div>
+  <h2>Choix du nom de la catégorie</h2>
+  <br>
+  <br>
+  <div class="div_input_form">
+    <input type="text" placeholder="Saisir une catégorie"/>
+    <button type="button" class="btn btn-primary btn-sm">Valider</button>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>Nom de la catégorie</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each @model.categories as |category|}}
+        <tr>
+          <td>{{category.nom}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+
 {{outlet}}
