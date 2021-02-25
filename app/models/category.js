@@ -1,6 +1,7 @@
-import Model, { hasMany } from '@ember-data/model';
+import Model, { attr }, { hasMany } from '@ember-data/model';
 
 export default class CategoryModel extends Model {
-  @hasMany('string') nom;
+  @attr('string') nom;
+  @hasMany('contact');
 }
 
