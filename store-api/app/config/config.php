@@ -24,5 +24,4 @@ return array(
 		"isRest"=>function(){
 			return \Ubiquity\utils\http\URequest::getUrlParts()[0]==="rest";
 		}
-		"host"=>"127.0.0.1","port"=>8091,"sessionName"=>null);
 );
