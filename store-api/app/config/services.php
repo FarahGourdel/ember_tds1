@@ -1,9 +1,7 @@
 <?php
+use Ubiquity\cache\CacheManager;
 use Ubiquity\controllers\Router;
- 
-\Ubiquity\cache\CacheManager::startProd($config);
-\Ubiquity\orm\DAO::start();
-Router::startAll();
+use Ubiquity\orm\DAO;
 
 /*if($config["test"]){
 \Ubiquity\log\Logger::init($config);
