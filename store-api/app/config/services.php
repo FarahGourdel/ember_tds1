@@ -3,6 +3,10 @@ use Ubiquity\cache\CacheManager;
 use Ubiquity\controllers\Router;
 use Ubiquity\orm\DAO;
 
+\Ubiquity\cache\CacheManager::startProd($config);
+\Ubiquity\orm\DAO::start();
+Router::startAll();
+
 /*if($config["test"]){
 \Ubiquity\log\Logger::init($config);
  $config["siteUrl"]="http://127.0.0.1:8090/";
