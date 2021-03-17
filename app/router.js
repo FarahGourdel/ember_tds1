@@ -25,4 +25,6 @@ Router.map(function () {
   });
   this.route('Abstractroute');
   this.route('sections');
+  this.route('board');
+  this.route('logout');
 });
