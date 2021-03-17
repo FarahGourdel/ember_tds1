@@ -20,6 +20,6 @@ if (class_exists("\\Monolog\\Logger")) {
 require ROOT . 'config/services.php';
 
 if (\Ubiquity\debug\Debug::hasLiveReload()) {
-	echo \Ubiquity\debug\Debug::liveReload();
+	//echo \Ubiquity\debug\Debug::liveReload();
 }
 \Ubiquity\controllers\Startup::run($config);
