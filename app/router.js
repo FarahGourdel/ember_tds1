@@ -24,7 +24,15 @@ Router.map(function () {
     });
   });
   this.route('Abstractroute');
-  this.route('sections');
+  this.route('sections', function() {
+    this.route('add');
+    this.route('update');
+  });
   this.route('board');
   this.route('logout');
+
+  this.route('products', function() {
+    this.route('add');
+    this.route('update');
+  });
 });
