@@ -1,9 +1,29 @@
 {{page-title "Index"}}
 
-<form {{action "login" @model on="submit"}}>
-  <Input type="email" @value={{@model.email}} placeholder="Votre email"/>
-  <Input type="password" @value={{@model.password}} placeholder="Votre mot de passe"/>
-  <button type="submit">Se connecter</button>
+<div class="ui segment">
+  <h1 class="ui center aligned header">Bienvenue sur la page d'accueil</h1>
+</div>
+
+<br><br><br>
+
+<div class="field">
+  <label class="ui font-weight-bold">Pour vous connecter, veuillez saisir votre email et votre mot de passe :</label>
+</div>
+
+<br><br><br>
+
+<form {{action "login" @model on="submit"}} class="ui form">
+  <div class="field">
+    <label>Email</label>
+    <Input type="email" @value={{@model.email}} placeholder="Votre email"/>
+  </div>
+  <br>
+  <div class="field">
+    <label>Mot de passe</label>
+    <Input type="password" @value={{@model.password}} placeholder="Votre mot de passe"/>
+  </div>
+  <br>
+  <button class="ui button" type="submit">Se connecter</button>
 </form>
 
 {{outlet}}
