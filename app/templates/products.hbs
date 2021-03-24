@@ -1,2 +1,18 @@
 {{page-title "Products"}}
+
+<ul>
+  {{#each @model as |product|}}
+    <li>{{product.name}}
+      <LinkTo class="ui sini icon button" @route="products.update" @model={{product.id}}>
+        <i class="ui edit icon"></i>
+      </LinkTo>
+    <ul>
+      {{#each product.packs as |pack|}}
+        <li>{{pack.name}}</li>
+      {{/each}}
+    </ul>
+    </li>
+  {{/each}}
+</ul>
+
 {{outlet}}
