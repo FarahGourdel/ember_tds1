@@ -15,7 +15,7 @@ export default class ProductsUpdateRoute extends Route {
 
   @action save(product) {
     product.save().then(() => {
-      this.transictionTo('products');
+      this.transitionTo('products');
     });
   }
   renderTemplate() {
