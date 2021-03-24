@@ -35,4 +35,8 @@ Router.map(function () {
     this.route('add');
     this.route('update');
   });
+
+  this.route('order', function() {
+    this.route('order_id');
+  });
 });
